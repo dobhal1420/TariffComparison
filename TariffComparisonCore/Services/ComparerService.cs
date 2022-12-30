@@ -1,23 +1,20 @@
 ﻿using TariffComparisonCore.Services.Interface;
 using TariffPersistence.Model.Interface;
-using System.Linq;
-using TariffComparisonCore.Factory;
 using TariffPersistence.Helper;
 
 namespace TariffComparisonCore.Services
 {
     public class ComparerService : IComparerService
     {
+        private IEnumerable<ITariff> _tariffs;
+        public ComparerService(IEnumerable<ITariff> tariffs)
+        {
+            _tariffs = tariffs ?? throw new ArgumentNullException(nameof(tariffs));
+        }
         public List<ITariff> Compare(int consumption)
         {
-            var factory = new TariffFactory();
-            var result = new List<ITariff>();
-            var tariffs = EnumUtil.GetValues<TariffType>();
-            foreach (var tariff in tariffs)
-            {
-                result.Add(factory.GetTariff(tariff));
-            }
-            return result.OrderBy(x => x.AnnualCost(consumption)).ToList();
+
+            return _tariffs.OrderBy(x => x.AnnualCost(consumption)).ToList();
         }
     }
 }
