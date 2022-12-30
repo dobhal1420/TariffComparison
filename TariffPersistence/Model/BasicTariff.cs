@@ -18,7 +18,7 @@ namespace TariffPersistence.Model
 
         public override string ToString()
         {
-            return $"{nameof(TariffName)}: {TariffName.ToString()}, {"Annual Cost"}: {annualCost.ToString()}";
+            return $"{nameof(TariffName)}: {TariffName}, {"Annual Cost"}: {annualCost}";
         }
     }
 }
