@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TariffComparisonCore", "Tar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TariffPersistence", "TariffPersistence\TariffPersistence.csproj", "{1B5D8E04-A6C5-49C3-938E-1FDAB5AFD91B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TariffTests", "TariffTests\TariffTests.csproj", "{ADE6F99B-B9F4-4157-900B-324BD0C7814E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1B5D8E04-A6C5-49C3-938E-1FDAB5AFD91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B5D8E04-A6C5-49C3-938E-1FDAB5AFD91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B5D8E04-A6C5-49C3-938E-1FDAB5AFD91B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE6F99B-B9F4-4157-900B-324BD0C7814E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE6F99B-B9F4-4157-900B-324BD0C7814E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE6F99B-B9F4-4157-900B-324BD0C7814E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE6F99B-B9F4-4157-900B-324BD0C7814E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
