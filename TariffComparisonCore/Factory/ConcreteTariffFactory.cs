@@ -7,9 +7,9 @@ namespace TariffComparisonCore.Factory
     /// <summary>
     /// A 'ConcreteCreator' class
     /// </summary>
-    public class ConcreteTariffFactory : TariffTypeFactory
+    public class TariffFactory : ITariffFactory
     {
-        public override ITariff GetTariff(TariffType tariff)
+        public ITariff GetTariff(TariffType tariff)
         {
             switch (tariff)
             {

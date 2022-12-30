@@ -4,11 +4,11 @@ using TariffPersistence.Model.Interface;
 namespace TariffComparisonCore.Factory
 {
     /// <summary>
-    /// The Creator Abstract Class
+    /// The Creator Interface Class
     /// </summary>
-    public abstract class TariffTypeFactory
+    public interface ITariffFactory
     {
-        public abstract ITariff GetTariff(TariffType tariff);
+        public ITariff GetTariff(TariffType tariff);
 
     }
 }

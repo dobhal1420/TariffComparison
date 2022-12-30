@@ -10,10 +10,13 @@ namespace TariffComparisonCore.Services
     {
         public List<ITariff> Compare(int consumption)
         {
-            var factory = new ConcreteTariffFactory();
+            var factory = new TariffFactory();
             var result = new List<ITariff>();
-            result.Add(factory.GetTariff(TariffType.Basic));
-            result.Add(factory.GetTariff(TariffType.Packaged));
+            var tariffs = EnumUtil.GetValues<TariffType>();
+            foreach (var tariff in tariffs)
+            {
+                result.Add(factory.GetTariff(tariff));
+            }
             return result.OrderBy(x => x.AnnualCost(consumption)).ToList();
         }
     }
