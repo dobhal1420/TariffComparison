@@ -2,7 +2,6 @@
 
 using Microsoft.Extensions.DependencyInjection;
 using TariffComparisonCore;
-using TariffComparisonCore.Services;
 using TariffComparisonCore.Services.Interface;
 using TariffPersistence;
 
